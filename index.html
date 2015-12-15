@@ -8,10 +8,10 @@
 <script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
 
-    <!-- Link Swiper's CSS -->
+    <!-- Rules of Quiz page style, Link Swiper's CSS -->
     <link rel="stylesheet" href="dist/css/swiper.min.css">
 
-    <!-- Demo styles -->
+    <!-- Rules of Quiz Page Style -->
     <style>
     html, body {
         position: relative;
@@ -50,26 +50,24 @@
         -webkit-align-items: center;
         align-items: center;
     }
-    .rulesPageSkipButton {
-      position:absolute;
-      padding:10px;
-      background-color: rgba(115, 115, 115, 0.4);
-      bottom:0;
-      right:0;
-    }
-    .rulesPageSkipButton a, a:link, a:visited, a:active {
+    .rulesPageSkipButton{
       text-decoration: none;
       color: white;
       width:100px;
      letter-spacing: 2px;
     font-weight: 100;
+      position:absolute;
+      padding:10px;
+      background-color: rgba(115, 115, 115, 0.4);
+      bottom:0;
+      right:0;
 }
     </style>
 
 <style>
 /*this is main background style */
 .main_bg{
-	background: url(main_bg.png) no-repeat center center fixed;
+	background: url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/main_bg.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -115,97 +113,69 @@ video
 	min-height: 100%;
 }
 
+#home .ui-content, #my-listview  {
+    width : 50%;
+    height: 70%;
+    margin-top:7%;
+    margin-left:2%;
+}
+
+#my-listview .ui-li {
+    height: 15%;
+}
+
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
 
 
 </style>
 </head>
-
 <body>
+
+<!--Intro page-->
 <div data-role="page" id="intro" data-dialog="true">
   <div data-role="header" >
   <div class="header_image">
-  <img  src="logo.png" alt="Logo"/>
+  <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png" alt="Logo"/>
   </div>
   </div>
-  <video autoplay aria-orientation="vertical">
-	<source src="small.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-	<source src="small.mp4" type='video/webm; codecs="vp8, vorbis"' />
-	Video not supported.
-	<!-- source:http://www.codesynthesis.co.uk/tutorials/html-5-full-screen-and-responsive-videos-->
-	<!--http://www.codesynthesis.co.uk/tutorials/html-5-full-screen-and-responsive-videos-->
-</video>
-    
+ <div  data-role="Video" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" >
+    <iframe src="http://player.vimeo.com/video/29116895?portrait=0" seamless="" height="580px" width="100%"></iframe>
+  </div>
 <div data-role="footer">
-	<h2>	<a href="#titleSequence" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power">SKIP</a></h2>
-
-    
+  <h2>  <a href="#home" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power">SKIP</a></h2>
 </div>
 </div>
 
 
-<!--Intro page-->
-<div data-role="page"  id="titleSequence" class="main_bg" >
+<!--Home page-->
+<div data-role="page"  id="home" class="main_bg" >
   <div data-role="header" >
   <div class="header_image">
-  <img  src="logo.png" alt="Logo"/>
+  <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png" alt="Logo"/>
   </div>
   </div>
 
-  <div class="ui-content">
-  <a href="#question" data-role="button"  class="ui-button">Quiz</a>
-  </div>
-	<div data-role="footer">
-	<h4>Footer</h4>
-  </div>
-</div>
-<!--Home page-->
-<div data-role="page" id="home" data-dialog="true" >
-  <div data-role="header">
-	<h1>This is home</h1>
-  </div>
-  <div class="ui-content">Content</div>
-  <div data-role="footer">
-	<h4>Footer</h4>
-  </div>
-</div>
+   <div data-role="content">
+        <ul data-role="listview" id="my-listview" data-icon="false">
+            <li data-role="list-divider" role="heading">Menu</li>
+            <li><a href="#ruleOfQuiz">Treasure Hunt</a></li>
+            <li><a href="#FavouriteList">Favourite List</a></li>
+            <li><a href="#Newsletter">Newsletter</a></li>
+            <li><a href="#Attractions">Attractions</a></li>
+            <li><a href="#TrophyCase">Trophy Case</a></li>
+        </ul>
+    </div>
 
-<!--Role of quiz-->
-<div data-role="page" id="ruleOfQuiz" class="main_bg">
-  <div data-role="header">
-	<h1>Header</h1>
-  </div>
-  <div data-role="content">Content</div>
-  <div data-role="footer">
-	<h4>Footer</h4>
-  </div>
-</div>
-<!--map and level selection page-->
-<div data-role="page" id="mapLevelSelect">
-  <div data-role="header">
-	<h1>Header</h1>
-  </div>
-  <div data-role="content">Content</div>
-  <div data-role="footer">
-	<h4>Footer</h4>
-  </div>
-</div>
 
-<!--Question page-->
-<!-- <div data-role="page" id="question">
-  <div data-role="header">
-	<h1>Header</h1>
-  </div>
-  <div data-role="content">Content</div>
   <div data-role="footer">
-	<h4>Footer</h4>
+  <h4>Footer</h4>
   </div>
-</div> -->
+</div>
 
 
 <!--Rules of the Quiz page-->
-<div data-role="page" id="question">
+<div data-role="page" id="ruleOfQuiz">
   <div data-role="header">
   <h1>Rules of the Quiz</h1>
   </div>
@@ -214,13 +184,13 @@ video
               <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(images/rules_of_quiz_1.jpg)">
+            <div class="swiper-slide" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
               <a href="#levelSelect" class="ui-btn rulesPageSkipButton">Skip</a>
             </div>
-            <div class="swiper-slide" style="background-image:url(images/rules_of_quiz_2.jpg)">
+            <div class="swiper-slide" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
               <a href="#levelSelect" class="ui-btn rulesPageSkipButton">Skip</a>
             </div>
-            <div class="swiper-slide" style="background-image:url(images/rules_of_quiz_3.jpg)">
+            <div class="swiper-slide" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
               <a href="#levelSelect" class="ui-btn rulesPageSkipButton">Skip</a>
             </div>
         </div>
@@ -231,24 +201,7 @@ video
         <div class="swiper-button-prev"></div>
     </div>
 
-        </div>
-  </div>
-  <div data-role="footer">
-  <h4>Footer</h4>
-  </div>
 </div>
-
-
-
-<!--Map Select Quiz page-->
-<div data-role="page" id="levelSelect">
-  <div data-role="header">
-  <h1>Level Select</h1>
-  </div>
-  <div data-role="content">
-        <div class="ui-body ui-body-a ui-corner-all">
-
-        </div>
   </div>
   <div data-role="footer">
   <h4>Footer</h4>
