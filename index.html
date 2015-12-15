@@ -70,10 +70,13 @@ video
   <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png" alt="Logo"/>
   </div>
   </div>
-  <video autoplay aria-orientation="vertical" controls>
-  	<source src="https://www.youtube.com/watch?v=wlBvwPU5PXg" type="video/mp4">
-	Video not supported.
-</video>
+
+
+<div data-role="popup" id="popupVideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+
+    <iframe src="http://player.vimeo.com/video/41135183" width="497" height="298" seamless></iframe>
+   
+</div>
     
 <div data-role="footer">
 	<h2>	<a href="#titleSequence" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power">SKIP</a></h2>
@@ -84,7 +87,7 @@ video
 
 
 <!--Intro page-->
-<div data-role="page"  id="titleSequence" class="main_bg" >
+<div data-role="page"  id="home" class="main_bg" >
   <div data-role="header" >
   <div class="header_image">
   <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png" alt="Logo"/>
@@ -92,24 +95,14 @@ video
   </div>
 
   <div class="ui-content">
-  <a href="#home" data-role="button"  class="ui-button">Link button</a>
+  <a href="#ruleOfQuiz" data-role="button"  class="ui-button">Link button</a>
   </div>
 	<div data-role="footer">
 	<h4>Footer</h4>
   </div>
 </div>
-<!--Home page-->
-<div data-role="page" id="home" data-dialog="true" >
-  <div data-role="header">
-	<h1>This is home</h1>
-  </div>
-  <div class="ui-content">Content</div>
-  <div data-role="footer">
-	<h4>Footer</h4>
-  </div>
-</div>
 
-<!--Role of quiz-->
+<!--Rule of quiz-->
 <div data-role="page" id="ruleOfQuiz" class="main_bg">
   <div data-role="header">
 	<h1>Header</h1>
