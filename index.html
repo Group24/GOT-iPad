@@ -59,6 +59,19 @@
 }
 
 
+
+#home .ui-content, #my-listview  {
+    width : 50%;
+    height: 70%;
+    margin-top:7%;
+    margin-left:2%;
+}
+
+#my-listview .ui-li {
+    height: 15%;
+}
+
+
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
 
@@ -76,7 +89,7 @@
   </div>
 
  <div  data-role="Video" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" >
-    <iframe src="http://player.vimeo.com/video/29116895?autoplay=1&portrait=0" seamless="" height="580px" width="100%"></iframe>
+    <iframe src="http://player.vimeo.com/video/29116895?&portrait=0" seamless="" height="580px" width="100%"></iframe>
   </div>
 
     
@@ -94,13 +107,23 @@
   </div>
   </div>
 
-  <div class="ui-content">
-  <a href="#ruleOfQuiz" data-role="button"  class="ui-button">Link button</a>
-  </div>
+   <div data-role="content">
+        <ul data-role="listview" id="my-listview" >
+            <li data-role="list-divider" role="heading">Menu</li>
+            <li><a href="#ruleOfQuiz">Treasure Hunt</a></li>
+            <li><a href="#FavouriteList">Favourite List</a></li>
+            <li><a href="#Newsletter">Newsletter</a></li>
+            <li><a href="#Attractions">Attractions</a></li>
+            <li><a href="#TrophyCase">Trophy Case</a></li>
+        </ul>
+    </div>
+
+
 	<div data-role="footer">
 	<h4>Footer</h4>
   </div>
 </div>
+
 
 <!--Rule of quiz-->
 <div data-role="page" id="ruleOfQuiz" class="main_bg">
@@ -134,6 +157,49 @@
   </div>
 </div>
 
+<!--Favourite List-->
+<div data-role="page" id="FavouriteList" class="main_bg">
+  <div data-role="header">
+  <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+  <h4>Footer</h4>
+  </div>
+</div>
+
+<!--Newsletter-->
+<div data-role="page" id="Newsletter" class="main_bg">
+  <div data-role="header">
+  <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+  <h4>Footer</h4>
+  </div>
+</div>
+
+<!--Attractions-->
+<div data-role="page" id="Attractions" class="main_bg">
+  <div data-role="header">
+  <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+  <h4>Footer</h4>
+  </div>
+</div>
+
+<!--Trophy Case-->
+<div data-role="page" id="TrophyCase" class="main_bg">
+  <div data-role="header">
+  <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+  <h4>Footer</h4>
+  </div>
+</div>
 
 
 
