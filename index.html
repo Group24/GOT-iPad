@@ -82,6 +82,22 @@
       bottom:0;
       right:0;
     }  
+
+    .ui-select .ui-btn select {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100%;
+    height: 3em;
+    max-height: 100%;
+    outline: 0px none;
+    border-radius: inherit;
+    -moz-appearance: none;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
     
     
     
@@ -183,6 +199,41 @@
 
   <div data-role="footer" data-position="fixed">
        <h1>Skip</h1>
+  </div>
+</div>
+
+  <!--Favourites page-->
+<div data-role="page"  id="FavouriteList"  data-theme="b" >
+
+  <div data-role="header" >
+      <div class="header_image">
+            <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
+</div>  
+  </div>
+ 
+ <div data-role="ui-content">
+<form>
+    <input data-type="search" id="filterControlgroup-input">
+</form>
+<div data-role="controlgroup" id="fav" data-filter="true" data-input="#filterControlgroup-input" >
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Winterfell Stark North" >Winterfell</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="The Eyrie Vale Arryn" >The Eyrie</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Riverrun Tully Riverlands">Riverrun</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Casterly Rock Lannister Westerlands" >Casterly Rock</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Highgarden Tyrell  Reach" >Highgarden</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Storm's End Baratheon  Stormlands" >Storm's End </a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Sunspear Martell  Dorne"  >Sunspear </a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="King's Landing  Red Keep Crownlands">The Red Keep </a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Pyke Greyjoy Iron Islands" >Pyke </a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Castle Black  Night's Watch The Wall"  >The Wall</a>
+</div>
+ </div>   
+    
+    
+    
+
+  <div data-role="footer" data-position="fixed">
+      <h1>Skip</h1>
   </div>
 </div>
     
