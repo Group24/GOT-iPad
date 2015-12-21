@@ -294,16 +294,19 @@
         </select>
       </fieldset>
 
+          <!-- Ticket select -->
           <script type="text/javascript">
           function myFunction() {
           var x = document.getElementById("Adults").value;
           var y = document.getElementById("Children").value;
           if(x > 1){
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
-                  }else 
-          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
-
+                  }if(y > 1){
+          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Tickets";
+                  }else
+          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Ticket";
                                 }
+
           </script>
           <hr>
           <p id="Tickets" style="text-align: center;" >1 Ticket</p>
