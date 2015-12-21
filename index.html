@@ -233,7 +233,7 @@
     <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
 
-
+<!-- Makes Attraction Reponsive -->
 <style type="text/css">
 @media all and (max-width: 63em) {
   .my-breakpoint .ui-block-a,
@@ -271,7 +271,7 @@
             <input type="text" data-role="date" data-inline="true" data-theme="a">
       <fieldset class="ui-field-contain">
         <label for="Adults">Number of Adults</label>
-        <select name="Adults" id="Adults">
+        <select name="Adults" id="Adults" onchange="myFunction()">
           <option value="1">Adults-1</option>
           <option value="2">Adults-2</option>
           <option value="3">Adults-3</option>
@@ -283,7 +283,7 @@
         </fieldset>
         <fieldset class="ui-field-contain">
         <label for="Children">Number of Children(0-12)</label>
-        <select name="Children" id="Children">
+        <select name="Children" id="Children" onchange="myFunction()">
           <option value="0">Children-0</option>
           <option value="1">Children-1</option>
           <option value="2">Children-2</option>
@@ -293,6 +293,20 @@
           <option value="6">Children-6</option>
         </select>
       </fieldset>
+
+          <script type="text/javascript">
+          function myFunction() {
+          var x = document.getElementById("Adults").value;
+          var y = document.getElementById("Children").value;
+          if(x > 1){
+          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
+                  }else 
+          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
+
+                                }
+          </script>
+          <hr>
+          <p id="Tickets" style="text-align: center;" >1 Ticket</p>
           <input type="submit" value="Submit" >
            </form>
     </div>
