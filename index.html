@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- Meta Information -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-<title>Game of Thrones</title>
-    
+<title>Game of Thrones | Treasure Hunt</title>
+<meta name="keywords" content="treasure map,treasure hunt, game of thrones, web app, jquery mobile" />
+<meta name="description" content="using the mythos from game of thrones, creates fun adventure for users to solve" />
+<meta name ="author" content="Group-24">  
+
+<!-- Mobile Stuff -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Jquery Mobile -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     <!-- Rules of Quiz page style, Link Swiper's CSS -->
     <link rel="stylesheet" href="dist/css/swiper.min.css">
-    
 
-    
+    <script src="datepicker/jquery.mobile.datepicker.js"></script>
+    <script src="datepicker/jquery.ui.datepicker.js"></script>
+    <link rel="stylesheet" href="datepicker/jquery.mobile.datepicker.css">
+
+
+    <!-- Web Font -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
     
 <style>
 /*this is main background style */
@@ -81,28 +94,9 @@
       background-color: rgba(115, 115, 115, 0.4);
       bottom:0;
       right:0;
-    }  
+    } 
 
-    .ui-select .ui-btn select {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    min-height: 100%;
-    height: 3em;
-    max-height: 100%;
-    outline: 0px none;
-    border-radius: inherit;
-    -moz-appearance: none;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-}
-    
-    
-    
-    
-    
+        .bty{padding:25% 0;}
 </style>
 </head>
     
@@ -111,7 +105,7 @@
 <!--Intro page-->
 <div data-role="page" id="intro" data-theme="b">
 
-  <div data-role="header" >
+  <div data-role="header" data-position="fixed" >
     <div class="header_image">
     <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
   </div>
@@ -121,7 +115,7 @@
     <iframe id="player" src="http://player.vimeo.com/video/29116895?portrait=0" seamless="" style="position: absolute; height: 80%;  width: 100%; border: none" ></iframe> 
   </div>
 
-  <div data-role="footer" data-position="fixed">
+  <div data-role="footer" data-position="fixed" data-fullscreen="true">
     <h2>  <a href="#home" id="skipVideo"  class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power">SKIP</a></h2>
   </div>
 </div>
@@ -130,14 +124,8 @@
 <!--Home page-->
 <div data-role="page"  id="home" class="main_bg" data-theme="b" >
 
-  <div data-role="header" >
-      <div class="header_image">
-          
-        <a href="#popupPanel" data-rel="popup" data-transition="slide" data-position-to="window" data-role="button" data-icon="grid" data-theme="b"></a>
-			
-<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
-    <button data-theme="a" data-icon="grid" data-mini="true">Menu</button>	 
-</div>  
+ <div data-role="header" data-position="fixed" >
+    <div class="header_image">
     <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
   </div>
   </div>
@@ -158,7 +146,7 @@
     
 
   <div data-role="footer" data-position="fixed">
-      <h1>Skip</h1>
+      <h1>Home</h1>
   </div>
 </div>
     
@@ -193,7 +181,7 @@
         <div class="swiper-button-prev"></div>
     </div>
 
-</div>
+  </div>
   </div>
     
 
@@ -202,21 +190,21 @@
   </div>
 </div>
 
-  <!--Favourites page-->
-<div data-role="page"  id="FavouriteList"  data-theme="b" >
+  <!--Attractions page-->
+<div data-role="page"  id="Attractions"  data-theme="b" >
 
   <div data-role="header" >
       <div class="header_image">
             <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
-</div>  
+  </div>  
   </div>
  
  <div data-role="ui-content">
-<form>
+  <form>
     <input data-type="search" id="filterControlgroup-input">
-</form>
-<div data-role="controlgroup" id="fav" data-filter="true" data-input="#filterControlgroup-input" >
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Winterfell Stark North" >Winterfell</a>
+  </form>
+  <div data-role="controlgroup" id="fav" data-filter="true" data-input="#filterControlgroup-input" >
+    <a href="#winterfellP" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Winterfell Stark North" >Winterfell</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="The Eyrie Vale Arryn" >The Eyrie</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Riverrun Tully Riverlands">Riverrun</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Casterly Rock Lannister Westerlands" >Casterly Rock</a>
@@ -226,19 +214,87 @@
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="King's Landing  Red Keep Crownlands">The Red Keep </a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Pyke Greyjoy Iron Islands" >Pyke </a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Castle Black  Night's Watch The Wall"  >The Wall</a>
-</div>
- </div>   
+  </div>
+   </div>   
     
-    
-    
-
   <div data-role="footer" data-position="fixed">
-      <h1>Skip</h1>
+      <h1>Attractions</h1>
   </div>
 </div>
     
+  <!--WinterFellP -->
+<div data-role="page" class="type-interior" id="winterfellP"  data-theme="b" >
+
+  <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:5%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
+  </div>
+
+
+
+
+
+  <div data-role="content" class="ui-content">
+  <form method="post" action="">
+  <div class="ui-grid-a">
+    <div class="ui-block-a">
+      <img src="http://winteriscoming.net/wp-content/uploads/2015/11/Winterfell.jpg" style="margin-left: 0%;">
+      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
+      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
+      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
+      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
+      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
+    </div>
+    <div class="ui-block-b">
+      <label style="text-align: center;" >Date</label>
+       <div>
+            <input type="text" data-role="date" data-inline="true" data-theme="a">
+        </div>
+      <fieldset class="ui-field-contain">
+        <label for="Adults">Number of Adults</label>
+        <select name="Adults" id="Adults">
+          <option value="1">Adults-1</option>
+          <option value="2">Adults-2</option>
+          <option value="3">Adults-3</option>
+          <option value="4">Adults-4</option>
+          <option value="5">Adults-5</option>
+          <option value="6">Adults-6</option>
+          <option value="7">Adults-7</option>
+        </select>
+        </fieldset>
+        <fieldset class="ui-field-contain">
+        <label for="Children">Number of Children(0-12)</label>
+        <select name="Children" id="Children">
+          <option value="0">Children-0</option>
+          <option value="1">Children-1</option>
+          <option value="2">Children-2</option>
+          <option value="3">Children-3</option>
+          <option value="4">Children-4</option>
+          <option value="5">Children-5</option>
+          <option value="6">Children-6</option>
+        </select>
+      </fieldset>
+          <input type="submit" value="Submit" >
+           </form>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  <div data-role="footer" data-position="fixed" style="text-align: center;">
+    <p>Winterfell</p>
+  </div>
+</div>
+
     
-    
+
+
             <!--Script-->
     
             <!-- Swiper JS -->
@@ -260,8 +316,7 @@
         $("#player").attr("src","");
         $("#player").attr("src",video);
     });
-    </script>
 
-    
+    </script>    
 </body>
 </html>
