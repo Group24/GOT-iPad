@@ -19,12 +19,13 @@
     <!-- Rules of Quiz page style, Link Swiper's CSS -->
     <link rel="stylesheet" href="dist/css/swiper.min.css">
 
+    <!-- DatePicker Stuff -->
     <script src="datepicker/jquery.mobile.datepicker.js"></script>
     <script src="datepicker/jquery.ui.datepicker.js"></script>
     <link rel="stylesheet" href="datepicker/jquery.mobile.datepicker.css">
 
 
-    <!-- Web Font -->
+    <!-- Web Font not used yet-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 
     
@@ -204,26 +205,38 @@
     <input data-type="search" id="filterControlgroup-input">
   </form>
   <div data-role="controlgroup" id="fav" data-filter="true" data-input="#filterControlgroup-input" >
-    <a href="#winterfellP" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Winterfell Stark North" >Winterfell</a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="The Eyrie Vale Arryn" >The Eyrie</a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Riverrun Tully Riverlands">Riverrun</a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Winterfell Stark North" onclick="WinterF()">Winterfell</a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="The Eyrie Vale Arryn" onclick="EyrieV()">The Eyrie</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Riverrun Tully Riverlands" >Riverrun</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Casterly Rock Lannister Westerlands" >Casterly Rock</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Highgarden Tyrell  Reach" >Highgarden</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Storm's End Baratheon  Stormlands" >Storm's End </a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Sunspear Martell  Dorne"  >Sunspear </a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="King's Landing  Red Keep Crownlands">The Red Keep </a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="King's Landing  Red Keep Crownlands" >The Red Keep </a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Pyke Greyjoy Iron Islands" >Pyke </a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Castle Black  Night's Watch The Wall"  >The Wall</a>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Castle Black  Night's Watch The Wall">The Wall</a>
   </div>
    </div>   
+
+   <script type="text/javascript">
+          function WinterF() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/f/ff/Lino_Drieghe_Winterfell.JPG";
+        document.getElementById("Atract-Info").innerHTML = "Winterfell is the ancestral castle and seat of power of House Stark and is considered to be the capital of the north. It is located in the center of the northernmost province of the Seven Kingdoms, on the kingsroad that runs from Storm's End to the Wall. It is situated at the eastern edge of the wolfswood, north of the western branch of the White Knife and Castle Cerwyn. Winterfell is south of the northern mountains and southwest of Long Lake, one hundred leagues (three hundred miles) southeast of Deepwood Motte. ";
+                            }
+          function EyrieV() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/8f/The_Eyrie-TN.jpg";
+        document.getElementById("Atract-Info").innerHTML = "The Eyrie is the ancient seat of House Arryn, one of the oldest lines of Andal nobility, within the Vale of Arryn. It is situated in the Mountains of the Moon astride the peak known as the Giant's Lance, several thousand feet above the valley below. Although small compared to the seats of other Great Houses in Westeros, the Eyrie is considered impregnable to attack. During winter years, the Arryns seek refuge against the cold at the base of the mountain in the Gates of the Moon.";
+                            }
+          </script>
+
     
   <div data-role="footer" data-position="fixed">
       <h1>Attractions</h1>
   </div>
 </div>
     
-  <!--WinterFellP -->
-<div data-role="page" class="type-interior" id="winterfellP"  data-theme="b" >
+  <!--Purchase1 -->
+<div data-role="page" class="type-interior" id="Purchase1"  data-theme="b" >
 
   <div data-role="header" data-position="fixed" >
     <div class="header_image">
@@ -233,25 +246,25 @@
     <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
 
-<!-- Makes Attraction Reponsive -->
-<style type="text/css">
-@media all and (max-width: 63em) {
-  .my-breakpoint .ui-block-a,
-  .my-breakpoint .ui-block-b,
-  .my-breakpoint .ui-block-c,
-  .my-breakpoint .ui-block-d,
-  .my-breakpoint .ui-block-e {
-    width: 100%;
-    float:none;
-    text-align: center;
+  <!-- Makes Attraction Reponsive -->
+  <style type="text/css">
+  @media all and (max-width: 63em) {
+    .my-breakpoint .ui-block-a,
+    .my-breakpoint .ui-block-b,
+    .my-breakpoint .ui-block-c,
+    .my-breakpoint .ui-block-d,
+    .my-breakpoint .ui-block-e {
+      width: 100%;
+      float:none;
+      text-align: center;
+    }
   }
-}
 
-@media all and (mix-width: 45em) {
-  .my-breakpoint .ui-block-a{width: 65%;}
-  .my-breakpoint .ui-block-b{width: 35%;}
-      }
-</style>
+  @media all and (mix-width: 45em) {
+    .my-breakpoint .ui-block-a{width: 65%;}
+    .my-breakpoint .ui-block-b{width: 35%;}
+        }
+  </style>
 
 
 
@@ -259,12 +272,8 @@
   <form method="post" action="">
   <div class="ui-grid-a my-breakpoint">
     <div class="ui-block-a">
-      <img src="Image/Winterfell.png" style="text-align: center; max-width:100%; height:auto;">
-      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
-      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
-      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
-      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
-      <p>"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
+      <img src="Image/Winterfell.png" id="Atract-Image"style="text-align: center; max-width:500px; height:350px;">
+      <p id="Atract-Info">"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
     </div>
     <div class="ui-block-b">
       <label style="text-align: center;" >Date</label>
@@ -306,8 +315,8 @@
                   }else
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Ticket";
                                 }
-
           </script>
+
           <hr>
           <p id="Tickets" style="text-align: center;" >1 Ticket</p>
           <input type="submit" value="Submit" >
@@ -326,6 +335,12 @@
 </div>
 
     
+
+
+
+
+
+
 
 
             <!--Script-->
