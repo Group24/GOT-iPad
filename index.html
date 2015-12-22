@@ -207,14 +207,14 @@
   <div data-role="controlgroup" id="fav" data-filter="true" data-input="#filterControlgroup-input" >
     <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Winterfell Stark North" onclick="WinterF()">Winterfell</a>
     <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="The Eyrie Vale Arryn" onclick="EyrieV()">The Eyrie</a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Riverrun Tully Riverlands" >Riverrun</a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Casterly Rock Lannister Westerlands" >Casterly Rock</a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Highgarden Tyrell  Reach" >Highgarden</a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Storm's End Baratheon  Stormlands" >Storm's End </a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Sunspear Martell  Dorne"  >Sunspear </a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="King's Landing  Red Keep Crownlands" >The Red Keep </a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Pyke Greyjoy Iron Islands" >Pyke </a>
-    <a href="#" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Castle Black  Night's Watch The Wall">The Wall</a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Riverrun Tully Riverlands" onclick="RiverrunR()">Riverrun</a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Casterly Rock Lannister Westerlands" onclick="CasterlyR()" >Casterly Rock</a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Highgarden Tyrell  Reach" onclick="HighgardenT()">Highgarden</a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Storm's End Baratheon  Stormlands" onclick="StormE()" >Storm's End </a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Sunspear Martell  Dorne"  onclick="SunspearM()" >Sunspear </a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="King's Landing  Red Keep Crownlands" onclick="RedK()" >The Red Keep </a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Pyke Greyjoy Iron Islands" onclick="PykeG()" >Pyke </a>
+    <a href="#Purchase1" class="ui-btn ui-shadow ui-corner-all" data-filtertext="Castle Black  Night's Watch The Wall" onclick="WallT()" >The Wall</a>
   </div>
    </div>   
 
@@ -226,6 +226,38 @@
           function EyrieV() {
          document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/8f/The_Eyrie-TN.jpg";
         document.getElementById("Atract-Info").innerHTML = "The Eyrie is the ancient seat of House Arryn, one of the oldest lines of Andal nobility, within the Vale of Arryn. It is situated in the Mountains of the Moon astride the peak known as the Giant's Lance, several thousand feet above the valley below. Although small compared to the seats of other Great Houses in Westeros, the Eyrie is considered impregnable to attack. During winter years, the Arryns seek refuge against the cold at the base of the mountain in the Gates of the Moon.";
+                            }
+          function RiverrunR() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/4/4a/Riverrun_by_Feliche.jpg";
+        document.getElementById("Atract-Info").innerHTML = "Riverrun is the ancestral castle of House Tully, the Lords Paramount of the Trident. It is situated in the western riverlands, at the point where the Tumblestone and Red Fork rivers meet. Riverrun is north of Pinkmaiden and northwest of Acorn Hall. The castle sits along the river road, which links Lannisport and the crossroads.";
+                            }
+          function CasterlyR() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/7/72/Casterly_rock_by_feliche.jpg";
+        document.getElementById("Atract-Info").innerHTML = "Casterly Rock, nicknamed the Rock, is a fortress and the seat of House Lannister. The capital of the westerlands, it overlooks the harbor of Lannisport and the Sunset Sea. Nearby strongholds include Kayce and Feastfires to the west, Sarsfield to the north, and Cornfield and Clegane's Keep to the south. ";
+                            }
+          function HighgardenT() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/2/27/Highgarden_by_feliche.jpg";
+        document.getElementById("Atract-Info").innerHTML = "Highgarden is the seat of House Tyrell, regional capital of the Reach and the heart of chivalry in the Seven Kingdoms. It lies on the Mander and is where the Ocean Road meets the Roseroad, making it an important crossroads. Mace Tyrell is the Lord of Highgarden. The castle's household includes Lord Seneschal Garth Tyrell, Maester Lomys, the captain of the guard Igon Vyrwel, the master-at-arms Ser Vortimer Crane, and the fool Butterbumps. ";
+                            }
+          function StormE() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg";
+        document.getElementById("Atract-Info").innerHTML = "Storm's End is the seat of House Baratheon, the Lords Paramount of the Stormlands. The castle is located at Durran's Point on the northern coast of Shipbreaker Bay, south of Bronzegate and northeast of Griffin's Roost. The kingsroad runs north from Storm's End to King's Landing, the capital of the Seven Kingdoms One of the strongest castles in the Seven Kingdoms, Storm's End was once the ancestral seat of the Storm Kings of House Durrandon extending back many thousands of years. The castle is said to be protected by spells woven into its very walls that prevent magic from affecting it or passing through it. Renly Baratheon, Lord of Storm's End, is served by Maester Jurne. ";
+                            }
+          function SunspearM() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/85/Sunspear.jpg";
+        document.getElementById("Atract-Info").innerHTML = "Sunspear is the seat of House Nymeros Martell and the capital of Dorne. The castle is located north of the Greenblood on the far southeastern coast of Westeros and is surrounded on three sides by the sea. The princely Water Gardens lie three leagues away on the coastal road. The household of Doran Martell, Prince of Dorne, includes the castellan Ser Manfrey Martell, the seneschal Ricasso, the treasurer Alyse Ladybright, and Maester Myles.";
+                            }
+          function RedK() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/2/22/Red_Keep.jpg";
+        document.getElementById("Atract-Info").innerHTML = "The Red Keep is a castle containing the Iron Throne and is the home of the Lord of the Seven Kingdoms. It is located in King's Landing, the capital of the Seven Kingdoms, where it sits on Aegon's Hill.";
+                            }
+          function PykeG() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/f/fe/The_iron_islands_by_reneaigner.jpg";
+        document.getElementById("Atract-Info").innerHTML = "Pyke is a castle located on the island of the same name, which is one of the eight major Iron Islands. It is the seat of House Greyjoy, whose lord is known as the Lord Reaper of Pyke. The Greyjoys have been rulers of the Iron Islands since the War of Conquest. The Greyjoys claim the island is named after the castle.";
+                            }
+          function WallT() {
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/6/6b/The_wall_and_Castle_Black_by_Feliche.jpg";
+        document.getElementById("Atract-Info").innerHTML = "The Wall is a massive wall over 700 feet (213 meters) high and is made of ice, stretching 300 miles (482 kilometers) across the northern border of the Seven Kingdoms, separating it from the wild lands beyond. Appearing as one of the nine Wonders Made by Man in the book by Lomas Longstrider, the Wall is defended and held by the Sworn Brothers of the Night's Watch, who patrol and guard the castles from the Frostfangs mountain range in the west to the Bay of Seals in the east. ";
                             }
           </script>
 
