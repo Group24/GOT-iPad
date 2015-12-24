@@ -342,6 +342,7 @@
           function myFunction() {
           var x = document.getElementById("Adults").value;
           var y = document.getElementById("Children").value;
+          var priceofticket = 0.5 * x;
           if(x > 1){
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
                   }if(y > 1){
@@ -353,6 +354,7 @@
 
           <hr>
           <p id="Tickets" style="text-align: center;" >1 Ticket</p>
+          <p id="price" style="text-align: center;" >Price: Zero</p>
           <input type="submit" value="Submit" >
            </form>
     </div>
@@ -415,9 +417,6 @@
           <div id="currentPointsDiv">0</div>
       </div>
     </div>
-  <div data-role="footer" data-position="fixed">
-  <h4>Footer</h4>
-  </div>
 </div>
 
 
