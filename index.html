@@ -222,35 +222,42 @@
 
    <script type="text/javascript">
           function WinterF() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/f/ff/Lino_Drieghe_Winterfell.JPG";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/f/ff/Lino_Drieghe_Winterfell.JPG";
         document.getElementById("Atract-Info").innerHTML = "Winterfell is the ancestral castle and seat of power of House Stark and is considered to be the capital of the north. It is located in the center of the northernmost province of the Seven Kingdoms, on the kingsroad that runs from Storm's End to the Wall. It is situated at the eastern edge of the wolfswood, north of the western branch of the White Knife and Castle Cerwyn. Winterfell is south of the northern mountains and southwest of Long Lake, one hundred leagues (three hundred miles) southeast of Deepwood Motte. ";
+var myselect = $("#Children");
+myselect[0].selectedIndex = 0;
+myselect.selectmenu("refresh");
+var myselect = $("#Adults");
+myselect[1].selectedIndex = 1;
+myselect.selectmenu("refresh");
                             }
           function EyrieV() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/8/8f/The_Eyrie-TN.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/8f/The_Eyrie-TN.jpg";
         document.getElementById("Atract-Info").innerHTML = "The Eyrie is the ancient seat of House Arryn, one of the oldest lines of Andal nobility, within the Vale of Arryn. It is situated in the Mountains of the Moon astride the peak known as the Giant's Lance, several thousand feet above the valley below. Although small compared to the seats of other Great Houses in Westeros, the Eyrie is considered impregnable to attack. During winter years, the Arryns seek refuge against the cold at the base of the mountain in the Gates of the Moon.";
                             }
           function RiverrunR() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/4/4a/Riverrun_by_Feliche.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/4/4a/Riverrun_by_Feliche.jpg";
         document.getElementById("Atract-Info").innerHTML = "Riverrun is the ancestral castle of House Tully, the Lords Paramount of the Trident. It is situated in the western riverlands, at the point where the Tumblestone and Red Fork rivers meet. Riverrun is north of Pinkmaiden and northwest of Acorn Hall. The castle sits along the river road, which links Lannisport and the crossroads.";
                             }
           function CasterlyR() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/7/72/Casterly_rock_by_feliche.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/7/72/Casterly_rock_by_feliche.jpg";
         document.getElementById("Atract-Info").innerHTML = "Casterly Rock, nicknamed the Rock, is a fortress and the seat of House Lannister. The capital of the westerlands, it overlooks the harbor of Lannisport and the Sunset Sea. Nearby strongholds include Kayce and Feastfires to the west, Sarsfield to the north, and Cornfield and Clegane's Keep to the south. ";
+              
                             }
           function HighgardenT() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/2/27/Highgarden_by_feliche.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/2/27/Highgarden_by_feliche.jpg";
         document.getElementById("Atract-Info").innerHTML = "Highgarden is the seat of House Tyrell, regional capital of the Reach and the heart of chivalry in the Seven Kingdoms. It lies on the Mander and is where the Ocean Road meets the Roseroad, making it an important crossroads. Mace Tyrell is the Lord of Highgarden. The castle's household includes Lord Seneschal Garth Tyrell, Maester Lomys, the captain of the guard Igon Vyrwel, the master-at-arms Ser Vortimer Crane, and the fool Butterbumps. ";
                             }
           function StormE() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/8/8f/Storm_s_end_by_feliche.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg";
         document.getElementById("Atract-Info").innerHTML = "Storm's End is the seat of House Baratheon, the Lords Paramount of the Stormlands. The castle is located at Durran's Point on the northern coast of Shipbreaker Bay, south of Bronzegate and northeast of Griffin's Roost. The kingsroad runs north from Storm's End to King's Landing, the capital of the Seven Kingdoms One of the strongest castles in the Seven Kingdoms, Storm's End was once the ancestral seat of the Storm Kings of House Durrandon extending back many thousands of years. The castle is said to be protected by spells woven into its very walls that prevent magic from affecting it or passing through it. Renly Baratheon, Lord of Storm's End, is served by Maester Jurne. ";
                             }
           function SunspearM() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/8/85/Sunspear.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/85/Sunspear.jpg";
         document.getElementById("Atract-Info").innerHTML = "Sunspear is the seat of House Nymeros Martell and the capital of Dorne. The castle is located north of the Greenblood on the far southeastern coast of Westeros and is surrounded on three sides by the sea. The princely Water Gardens lie three leagues away on the coastal road. The household of Doran Martell, Prince of Dorne, includes the castellan Ser Manfrey Martell, the seneschal Ricasso, the treasurer Alyse Ladybright, and Maester Myles.";
                             }
           function RedK() {
-         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/Image/2/22/Red_Keep.jpg";
+         document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/2/22/Red_Keep.jpg";
         document.getElementById("Atract-Info").innerHTML = "The Red Keep is a castle containing the Iron Throne and is the home of the Lord of the Seven Kingdoms. It is located in King's Landing, the capital of the Seven Kingdoms, where it sits on Aegon's Hill.";
                             }
           function PykeG() {
@@ -294,7 +301,7 @@
     }
   }
 
-  @media all and (min-width: 62em) {
+  @media all and (min-width: 63em) {
     .my-breakpoint .ui-block-a{width: 65%;}
     .my-breakpoint .ui-block-b{width: 35%;}
         }
@@ -303,14 +310,13 @@
 
 
   <div data-role="content" class="ui-content">
-  <form method="post" action="">
+  <form method="post" action="#purchase2">
   <div class="ui-grid-a my-breakpoint">
     <div class="ui-block-a">
       <img src="Image/Winterfell.png" id="Atract-Image"style="text-align: center; max-width:500px; height:350px;">
       <p id="Atract-Info">"winterfell winterfell winterfellwinterfell winterfellwinterfell"</p>
     </div>
     <div class="ui-block-b">
-      <label style="text-align: center;" >Date</label>
             <input type="text" data-role="date" data-inline="true" data-theme="a">
       <fieldset class="ui-field-contain">
         <label for="Adults">Number of Adults</label>
@@ -325,7 +331,7 @@
         </select>
         </fieldset>
         <fieldset class="ui-field-contain">
-        <label for="Children">Number of Children(0-12)</label>
+        <label for="Children">Number of Children(0-12)(Free)</label>
         <select name="Children" id="Children" onchange="myFunction()">
           <option value="0">Children-0</option>
           <option value="1">Children-1</option>
@@ -342,20 +348,24 @@
           function myFunction() {
           var x = document.getElementById("Adults").value;
           var y = document.getElementById("Children").value;
-          var priceofticket = 0.5 * x;
+          var priceofticket = 2.99 * x;
+          var rounded = priceofticket.toFixed(2)
           if(x > 1){
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
+          document.getElementById("price").innerHTML = "<strong>Price £ " + rounded+"</strong>";
                   }if(y > 1){
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Tickets";
+          document.getElementById("price").innerHTML =  "<strong>Price £ " + rounded+"</strong>";
                   }else
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Ticket";
+          document.getElementById("price").innerHTML =  "<strong>Price £ " + rounded+"</strong>";
                                 }
           </script>
 
           <hr>
           <p id="Tickets" style="text-align: center;" >1 Ticket</p>
           <p id="price" style="text-align: center;" >Price: Zero</p>
-          <input type="submit" value="Submit" >
+          <a href="#Purchase2" ><input type="submit" value="Submit"  ></a>
            </form>
     </div>
   </div>
@@ -366,6 +376,65 @@
   </div>
 </div>
 
+<!--Purchase2 -->
+<div data-role="page" class="type-interior" id="Purchase2"  data-theme="b" >
+
+  <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:10%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
+  </div>
+
+     <div data-role="content" class="ui-content" style="text-align: center;">
+  <form method="post" action="#purchase3">
+      <div class="ui-field-contain">
+<label for="Title" class="select">Title</label>
+<select name="Title" id="Title-select" data-mini="true" data-inline="true">
+    <option value="Mr">Mr.</option>
+    <option value="Ms">Ms.</option>
+    <option value="Dr">Dr.</option>
+</select>
+</div>
+      
+     <div class="ui-field-contain">  
+<label for="FirstName">First Name</label>
+<input  data-clear-btn="true" name="FirstName" data-mini="true" id="FirstName" value="" type="text">
+      </div>
+      
+         
+       <div class="ui-field-contain">
+      <label for="Surname">Surname</label>
+<input data-clear-btn="true" name="Surname" data-mini="true" id="Surname" value=""  type="text">
+      </div>
+      
+       <div class="ui-field-contain">
+      <label for="Email">Email</label>
+<input data-clear-btn="true" name="Email" id="Email" data-mini="true" value="" placeholder="Placeholder@gmail.com" type="email">
+      </div>
+      
+       <div class="ui-field-contain">
+      <label for="Telephone">Telephone</label>
+<input data-clear-btn="true" name="Telephone" data-mini="true" id="Telephone" value="" placeholder="079" type="tel">
+      </div>
+      
+      
+       <div class="ui-field-contain">
+       <a href="#Purchase3" ><input type="submit" data-mini="true" value="Submit"  ></a>
+      </div>
+         </form>
+
+
+
+  <div data-role="footer" data-position="fixed" style="text-align: center;">
+    <p>Purchase 2</p>
+  </div>
+</div>
+
+
+
+<!--Map Select Quiz page Style-->
 <style>
 #levelSelect img{
   margin: auto auto;
