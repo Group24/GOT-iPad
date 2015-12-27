@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="datepicker/jquery.mobile.datepicker.css">
 
 
-    <!-- Web Font not used yet-->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
 
     
 <style>
@@ -45,17 +44,7 @@
     margin-right:auto;
     display: block
 }
-    /*Listview Menu*/
-#home .ui-content, #my-listview  {
-    width : 35%;
-    margin-top:10%;
-    margin-left:2%;
-}
 
-#my-listview .ui-li {
-    height : 20%;
-    padding:10px;
-}  
     /* Rules page swiper*/
    .swiper-container {
         width:960px;
@@ -110,10 +99,31 @@
     <div class="header_image">
     <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
   </div>
+      
+            <!-- Makes Intro Reponsive Doesn't work for Iphone -->
+  <style type="text/css">
+  @media all and (max-width: 64em) {
+                    #player  {
+               height: 87.5%;
+}
+
+
+
+    }
+  
+
+  @media all and (min-width: 62em) {
+            #player  {
+           height: 84.5%;                
+}
+
+        }
+  </style>
+      
 
   </div>
-    <div data-role="ui-content" id="introVideoContainer" data-overlay-theme="a" data-theme="d" data-tolerance="15,15">
-    <iframe id="player" src="http://player.vimeo.com/video/29116895?portrait=0" seamless="" style="position: absolute; height: 80%;  width: 100%; border: none" ></iframe> 
+    <div data-role="ui-content" id="introVideoContainer" data-overlay-theme="a" data-theme="d" >
+    <iframe id="player" src="http://player.vimeo.com/video/29116895?portrait=0" style="position: absolute;  width: 100%; border: none" ></iframe> 
   </div>
 
   <div data-role="footer" data-position="fixed" data-fullscreen="true">
@@ -131,6 +141,38 @@
   </div>
   </div>
     
+      <!-- Makes Home Reponsive Works for Iphone -->
+  <style type="text/css">
+  @media all and (max-width: 64em) {
+                    #home .ui-content, #my-listview  {
+    width : 75%;
+    margin-top:10%;
+    margin-left:2%;
+}
+      #my-listview .ui-li {
+    height : 20%;
+    padding:10px;
+}  
+
+
+    }
+  
+
+  @media all and (min-width: 62em) {
+            #home .ui-content, #my-listview  {
+    width : 35%;
+    margin-top:10%;
+    margin-left:2%;
+}
+      #my-listview .ui-li {
+    height : 20%;
+    padding:10px;
+}  
+
+
+        }
+  </style>
+
     
 
    <div data-role="ui-content">
@@ -197,7 +239,7 @@
   <div data-role="header" data-position="fixed" >
     <div class="header_image">
     <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
-    <a href="#home"  style="margin-left:10%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
     </div>  
     <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
@@ -282,12 +324,12 @@ myselect.selectmenu("refresh");
   <div data-role="header" data-position="fixed" >
     <div class="header_image">
     <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
-    <a href="#home"  style="margin-left:10%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
     </div>  
     <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
 
-  <!-- Makes Attraction Reponsive -->
+  <!-- Makes Attraction Reponsive Works for Iphone-->
   <style type="text/css">
   @media all and (max-width: 63em) {
     .my-breakpoint .ui-block-a,
@@ -376,13 +418,14 @@ myselect.selectmenu("refresh");
   </div>
 </div>
 
+
 <!--Purchase2 -->
 <div data-role="page" class="type-interior" id="Purchase2"  data-theme="b" >
 
   <div data-role="header" data-position="fixed" >
     <div class="header_image">
     <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
-    <a href="#home"  style="margin-left:10%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
     </div>  
     <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
@@ -459,7 +502,8 @@ She must have something heavy inside</label>
       </div>
       
        <div class="ui-field-contain">
-       <a href="#Purchase3" ><input type="submit" data-mini="true" value="Submit"  ></a>
+       <a href="#Purchase3" ><input type="submit" value="Submit"  ></a>
+      </div>
       </div>
          </form>
 
@@ -470,6 +514,31 @@ She must have something heavy inside</label>
   </div>
 </div>
 
+
+
+<!--Purchase3 -->
+<div data-role="page" class="type-interior" id="Purchase3"  data-theme="b" >
+    
+      <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
+  </div>
+
+<div data-role="content" class="ui-content" style="text-align: center;">
+    
+</div>
+
+
+    
+    
+    
+      <div data-role="footer" data-position="fixed" style="text-align: center;">
+    <p>Purchase 3</p>
+  </div>
+</div>
 
 
 <!--Map Select Quiz page Style-->
