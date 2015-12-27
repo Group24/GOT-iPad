@@ -527,7 +527,22 @@ She must have something heavy inside</label>
     <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
 
-<div data-role="content" class="ui-content" style="text-align: center;">
+<div data-role="pop-up" class="ui-content" style="text-align: center;">
+    
+
+<form action="/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+    data-image="/img/documentation/checkout/marketplace.png"
+    data-name="Stripe.com"
+    data-description="2 widgets"
+    data-amount="2000"
+    data-locale="auto">
+  </script>
+</form>
+
+
     
 </div>
 
