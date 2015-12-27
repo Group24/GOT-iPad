@@ -509,7 +509,7 @@ She must have something heavy inside</label>
 <script>
   var handler = StripeCheckout.configure({
     key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-    image: '/img/documentation/checkout/marketplace.png',
+    image: 'http://i.4cdn.org/vg/1451185606020.png',
     locale: 'auto',
     token: function(token) {
       // Use the token to create the charge with a server-side script.
@@ -520,8 +520,8 @@ She must have something heavy inside</label>
   $('#customButton').on('click', function(e) {
     // Open Checkout with further options
     handler.open({
-      name: 'Stripe.com',
-      description: '2 widgets',
+      name: 'Group 24.inc',
+      description: 'Stripe Times',
       amount: 2000
     });
     e.preventDefault();
