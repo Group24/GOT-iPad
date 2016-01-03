@@ -12,9 +12,15 @@
 <!-- Mobile Stuff -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Jquery Mobile -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="themes/GoT_24_theme_1.min.css" />
+    
+    
+       
 
     <!-- Rules of Quiz page style, Link Swiper's CSS -->
     <link rel="stylesheet" href="dist/css/swiper.min.css">
@@ -24,6 +30,8 @@
     <script src="datepicker/jquery.ui.datepicker.js"></script>
     <link rel="stylesheet" href="datepicker/jquery.mobile.datepicker.css">
 
+    <!--   memory game -->
+    <link rel="stylesheet" type="text/css" href="quizy/css/quizymemorygame.css" />
 
 
 
@@ -351,7 +359,7 @@ myselect.selectmenu("refresh");
 
 
 
-  <div data-role="content" class="ui-content">
+  <div data-role="content" class="ui-content" data-theme="b">
   <form method="post" action="#purchase2">
   <div class="ui-grid-a my-breakpoint">
     <div class="ui-block-a">
@@ -604,10 +612,80 @@ She must have something heavy inside</label>
 
 <!-- HOUSE PLACEHOLDER PAGES -->
 
-<div data-role="page" id="theWall" data-dialog="true">
-  <div data-role="header" >
-  <h1>THEWALL</h1>
+<div data-role="page" id="theWall" data-theme="b" >
+  <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
+
+<div data-role="content" data-theme="a" style="text-align: center;"> 
+<!-- memory game -->
+<script src="quizy/js/jquery.flip.min.js" /></script>
+<script src="quizy/js/jquery.quizymemorygame.js" /></script>
+
+<div id="my-memorygame" class="quizy-memorygame" style="margin-left:15%;" >
+<ul>
+  <li class="Stark">
+    Stark
+  </li>
+  <li class="Stark">
+    Wolf
+  </li>
+  <li class="Lannister">
+    Lannister
+  </li>
+  <li class="Lannister">
+    Lion
+  </li>
+  <li class="Arryn">
+    Arryn
+  </li>
+  <li class="Arryn">
+    falcon 
+  </li>
+  <li class="Tully">
+    Tully 
+  </li>
+  <li class="Tully">
+    Trout 
+  </li>
+   <li class="Baratheon">
+    Baratheon 
+  </li>
+  <li class="Baratheon">
+    Stag 
+  </li>
+  <li class="Tyrell">
+    Tyrell
+  </li>
+  <li class="Tyrell">
+    Rose 
+  </li>
+  <li class="Martell">
+    Martell
+  </li>
+  <li class="Martell">
+    Red sun
+  </li>
+  <li class="Targaryen">
+    Targaryen
+  </li>
+  <li class="Targaryen">
+    Dragon
+  </li>
+</ul>
+</div>
+
+<script>
+$('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, textSummaryTitle:'ForstFang' });
+</script>
+
+</div>
+
+
 
   <div class="ui-btn ui-input-btn ui-shadow">
   Complete question
