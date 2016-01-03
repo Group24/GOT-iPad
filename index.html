@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="themes/GoT_24_theme_1.min.css" />
     
     
+    
        
 
     <!-- Rules of Quiz page style, Link Swiper's CSS -->
@@ -53,7 +54,7 @@
     display: block
 }
 
-    /* Rules page swiper*/
+   /* Rules page swiper*/
    .swiper-container {
         width:960px;
         height:460px;
@@ -65,8 +66,6 @@
         text-align: center;
         font-size: 18px;
         background: #fff;
-
-        /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -94,7 +93,87 @@
       right:0;
     } 
 
+
         .bty{padding:25% 0;}
+    
+ #arrynCompletionPageImage{
+  width:295px;
+  height:470px;
+  float: left;
+ }
+ #arrynCompletionPageText{
+  width: 200px;
+  height: 470px;
+  float: left;
+  word-wrap: break-word; 
+  font-size: 12px;
+  padding-right: 5px;
+  margin-top: 20px;
+ }
+ #arrynCompletionPageTitle{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+ }
+ #arrynCompletionPageContainer{
+    background-color: #233439;
+    width: 500px;
+    height: 475px;
+ }
+#arrynPageImage {
+    height: 300px;
+    width: 100%;
+    background-image: url('http://highlighthollywood.com/wp-content/uploads/2014/11/eyrie-game-of-thrones-the-wolf-and-the-lion-011.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center; 
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
+}
+#arrynCluePageImage {
+    height: 300px;
+    width: 100%;
+    background-image: url('http://vignette2.wikia.nocookie.net/gotascent/images/6/6e/Vale-the_Eyrie.jpg/revision/latest?cb=20141009131344');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center; 
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
+}
+
+  @media all and (max-width: 45em) {
+       #arrynCompletionPageContainer{
+    width: 300px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+ #arrynCompletionPageText{
+  margin-left: 25px;
+ }
+    }
+
+      /*Swiper Trophy Case styles*/
+    .swiper-container-trophy {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide-trophy {
+        background-position: center;
+        background-size: cover;
+        width: 295px;
+        height: 470px;}   
+    
 </style>
 </head>
     
@@ -190,7 +269,7 @@
             <li><a href="#FavouriteList">Favourite List <img  src="Image/Favourite.png"/> </a></li>
             <li><a href="#Newsletter">Newsletter <img  src="Image/Newsletter.png"/> </a></li>
             <li data-icon="location"><a href="#Attractions">Attractions <img  src="Image/Attraction.png"/> </a></li>
-            <li><a href="#TrophyCase">Trophy Case <img  src="Image/Trophy.png"/> </a></li>
+            <li><a href="#trophyCase">Trophy Case <img  src="Image/Trophy.png"/> </a></li>
         </ul>
     </div>
     
@@ -205,6 +284,7 @@
 <!--Rules of the Quiz page-->
 <div data-role="page" id="ruleOfQuiz" data-theme="b" >
   <div data-role="header">
+  <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
       <div class="header_image">
     <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
   </div>
@@ -213,20 +293,20 @@
   <div data-role="content">
         <div class="ui-body ui-body-a ui-corner-all">
               <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
+    <div class="swiper-container swiper-container-rules">
+        <div class="swiper-wrapper swiper-wrapper-rules">
+            <div class="swiper-slide swiper-slide-rules" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
               <a href="#levelSelect" class="ui-btn rulesPageSkipButton">Skip</a>
             </div>
-            <div class="swiper-slide" style="background-image:url(http://mini-site.louvre.fr/ingres/Image/grandes-html/source.jpg)">
+            <div class="swiper-slide swiper-slide-rules" style="background-image:url(http://mini-site.louvre.fr/ingres/Image/grandes-html/source.jpg)">
               <a href="#levelSelect" class="ui-btn rulesPageSkipButton">Skip</a>
             </div>
-            <div class="swiper-slide" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
+            <div class="swiper-slide swiper-slide-rules" style="background-image:url(https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png)">
               <a href="#levelSelect" class="ui-btn rulesPageSkipButton">Skip</a>
             </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination-rules"></div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -237,12 +317,53 @@
     
 
   <div data-role="footer" data-position="fixed">
-       <h1>Skip</h1>
   </div>
 </div>
 
+    
+    
+<!--Trophy Case -->
+<div data-role="page" id="trophyCase" data-theme="a" >
+  <div data-role="header">
+  <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+      <div style="margin-left:20%;" class="header_image">
+    <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
+  </div>
+  </div>
+  <div data-role="content">
+        <div class="ui-body ui-body-c ui-corner-all">
+    <!-- Swiper Trophy Case -->
+    <div class="swiper-container-trophy swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase1" style="background-image:url(image/cards/thewall/thewall_sigil.png)" onclick="trophyTheWall()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase2" style="background-image:url(image/cards/starks/starks_sigil.png)" onclick="trophyStarks()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase3" style="background-image:url(image/cards/arryn/arryn_sigil.png)" onclick="trophyArryn()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase4" style="background-image:url(image/cards/tully/tully_sigil.png)" onclick="trophyTully()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase5" style="background-image:url(image/cards/greyjoy/greyjoy_sigil.png)" onclick="trophyGreyjoy()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase6" style="background-image:url(image/cards/lannister/lannister_sigil.png)" onclick="trophyLannister()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase7" style="background-image:url(image/cards/tyrell/tyrell_sigil.png)" onclick="trophyTyrell()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase8" style="background-image:url(image/cards/martell/martell_sigil.png)" onclick="trophyMartell()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase9" style="background-image:url(image/cards/baratheon/baratheon_sigil.png)" onclick="trophyBaratheon()"></div>
+            <div class="swiper-slide swiper-slide-trophy" id="trophyCase10" style="background-image:url(image/cards/targaryen/targ_sigil.png)" onclick="trophyTargaryen()"></div>
+        </div>
+        <!-- Add Pagination Trophy Case Swiper -->
+        <div class="swiper-pagination swiper-pagination-trophy"></div>
+    </div>
+
+
+
+  </div>
+  </div>
+    
+
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+
   <!--Attractions page-->
 <div data-role="page"  id="Attractions"  data-theme="b" >
+    
 
   <div data-role="header" data-position="fixed" >
     <div class="header_image">
@@ -720,19 +841,73 @@ $('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargi
 </div>
 </div>
 
-<div data-role="page" id="arryn" data-dialog="true">
-  <div data-role="header" >
-  <h1>ARRYN</h1>
+<div data-role="page" id="arryn" data-theme="b" >
+  <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
-  <div class="ui-btn ui-input-btn ui-shadow">
-  Complete question
-  <input type="button" data-corners="false" data-enhanced="true" value="Complete Question" onclick="selectMap(5); setArrynPoints(3)"></input>
+
+<div data-role="content" data-theme="b" style="text-align: center;"> 
+<h3 class="ui-bar ui-bar-a ui-corner-all">What is the term given to the House Arryn Stronghold?</h3>
+<div id="arrynPageImage"></div>
+      <div class="ui-body ui-body-a ui-corner-all">
+          <a href="#arrynCompletionPage" class="ui-btn ui-btn-inline levelSelectPage" onclick="setArrynPoints(getArrynQuestionPoints()); selectMap(5); createArrynReward();">The Eyrie</a>
+          <button class="ui-btn ui-btn-inline" id="arrynIncorrectButton1" onclick="arrynQuestionAttempt(); arrynQuestionPageDisableButton(1);">Castle on the Rocks</button>
+          <button class="ui-btn ui-btn-inline" id="arrynIncorrectButton2" onclick="arrynQuestionAttempt(); arrynQuestionPageDisableButton(2);">The Elibom</button>
+          <button class="ui-btn ui-btn-inline" id="arrynIncorrectButton3" onclick="arrynQuestionAttempt(); arrynQuestionPageDisableButton(3);">The Mountain Kingdom</button>
+      </div>
 </div>
-  <div class="ui-btn ui-input-btn ui-shadow">
-  reveal number
-  <input type="button" data-corners="false" data-enhanced="true" value="The Button" onclick="showNum();"></input>
+<div data-role="footer" data-position="fixed" >
+  <a href="#arrynCluePage" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-info">Clue</a>
 </div>
-              <a href="#levelSelect" class="levelSelectPage" class="ui-btn rulesPageSkipButton">Go to map</a>
+</div>
+
+<div data-role="page" id="arrynCluePage" data-theme="b" >
+  <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
+  </div>
+
+<div data-role="content" data-theme="b" style="text-align: center;"> 
+
+
+<h3>House Arryn Stronghold</h3>
+<div class="ui-grid-a ui-responsive">
+    <div class="ui-block-a">
+      <div class="ui-body">
+
+          It is the principal stronghold of House Arryn. It is located in the Vale of Arryn near the east coast of Westeros. It straddles the top of a peak in the Mountains of the Moon several thousand feet above the valley floor below. It is approached by a narrow causeway and road. Those who would approach the Eyrie must pass through three way-castles guarding the ascent - and then, must proceed in single file, making them very vulnerable to archers. For these reasons, it is considered impregnable to any attack that does not involve dragons.
+
+          The High Hall of this place is the main audience chamber, where the Lord of the Vale greets visitors from a throne made of weirwood. A notable feature of the chamber is the Moon Door, a hatch built into the floor through which people can fall to the floor of the Vale far below. Being thrown through the Moon Door is the preferred method of execution at the Eyrie.
+
+          Prisoners at this place are incarcerated in the "sky cells", cells which are open on one side to the air. There is a very slight slope in the cells, and prisoners must be careful not to roll out of the cell in their sleep and plummet to their deaths.
+
+      </div>
+    </div>
+    <div class="ui-block-b">
+      <div class="ui-body"><div id="arrynCluePageImage"></div></div>
+    </div>
+</div>
+</div>
+<div data-role="footer" data-position="fixed">
+</div>
+</div>
+
+<div data-role="page" id="arrynCompletionPage" data-dialog="true">
+  <div data-role="header" >
+  <h4>You have unlocked</h4>
+  <h4 id="arrynCompletionPageTitle"></h4>
+  </div>
+  <div id="arrynCompletionPageContainer">
+    <div id="arrynCompletionPageImage"></div>
+    <div id="arrynCompletionPageText"></div>
+  </div>
 
 <div data-role="footer">
 </div>
@@ -871,8 +1046,23 @@ $('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargi
     <script src="dist/js/swiper.min.js"></script>
 
     <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
+	   // Trophy Case Sweiper Script
+    var swiper = new Swiper('.swiper-container-trophy', {
+        pagination: '.swiper-pagination-trophy',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+     var swiper = new Swiper('.swiper-container-rules', {
+        pagination: '.swiper-pagination-rules',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         slidesPerView: 1,
@@ -887,10 +1077,302 @@ $('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargi
         $("#player").attr("src",video);
     });
 
-    </script>    
+    </script> 
+
+    <script>
+        
+   //Trophy Case Script
+ var sigilTheWall = false;
+    function trophyTheWall(){
+        if(sigilTheWall == true){
+        $('#trophyCase1').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/thewall/thewall_sigil.png").fadeTo('slow', 1);
+        sigilTheWall = false;
+        }
+        else if((sigilTheWall == false) && (theWallPoints == 3)){
+        $('#trophyCase1').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/thewall/thewall_king.png)").fadeTo('slow', 1);
+        sigilTheWall = true;
+        }
+        else if((sigilTheWall == false) && (theWallPoints == 2)){
+        $('#trophyCase1').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/thewall/thewall_queen.png)").fadeTo('slow', 1);
+        sigilTheWall = true;
+        }
+        else if((sigilTheWall == false) && (theWallPoints == 1)){
+        $('#trophyCase1').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/thewall/thewall_jack.png)").fadeTo('slow', 1);
+        sigilTheWall = true;
+        }
+        else if((sigilTheWall == false) && (theWallPoints == 0)){
+        $('#trophyCase1').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilTheWall = true;
+        }
+}
+ var sigilStarks = false;
+    function trophyStarks(){
+        if(sigilStarks == true){
+        $('#trophyCase2').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/starks/starks_sigil.png)").fadeTo('slow', 1);
+        sigilStarks = false;
+        }
+        else if((sigilStarks == false) && (starksPoints == 3)){
+        $('#trophyCase2').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/starks/starks_king.png)").fadeTo('slow', 1);
+        sigilStarks = true;
+        }
+        else if((sigilStarks == false) && (starksPoints == 2)){
+        $('#trophyCase2').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/starks/starks_queen.jpg)").fadeTo('slow', 1);
+        sigilStarks = true;
+        }
+        else if((sigilStarks == false) && (starksPoints == 1)){
+        $('#trophyCase2').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/starks/starks_jack.png)").fadeTo('slow', 1);
+        sigilStarks = true;8
+        }
+        else if((sigilStarks == false) && (starksPoints == 0)){
+        $('#trophyCase2').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilStarks = true;
+        }
+
+}
+ var sigilArryn = false;
+    function trophyArryn(){
+        if(sigilArryn == true){
+        $('#trophyCase3').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_sigil.png").fadeTo('slow', 1);
+        sigilArryn = false;
+        }
+        else if((sigilArryn == false) && (arrynPoints == 3)){
+        $('#trophyCase3').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_king.png)").fadeTo('slow', 1);
+        sigilArryn = true;
+        }
+        else if((sigilArryn == false) && (arrynPoints == 2)){
+        $('#trophyCase3').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_queen.png)").fadeTo('slow', 1);
+        sigilArryn = true;
+        }
+        else if((sigilArryn == false) && (arrynPoints == 1)){
+        $('#trophyCase3').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_jack.png)").fadeTo('slow', 1);
+        sigilArryn = true;
+        }
+        else if((sigilArryn == false) && (arrynPoints == 0)){
+        $('#trophyCase3').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilArryn = true;
+        }
+
+}
+ var sigilTully = false;
+    function trophyTully(){
+        if(sigilTully == true){
+        $('#trophyCase4').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tully/tully_sigil.png)").fadeTo('slow', 1);
+        sigilTully = false;
+        }
+        else if((sigilTully == false) && (tullyPoints == 3)){
+        $('#trophyCase4').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tully/tully_king.png)").fadeTo('slow', 1);
+        sigilTully = true;
+        }
+        else if((sigilTully == false) && (tullyPoints == 2)){
+        $('#trophyCase4').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tully/tully_queen.png)").fadeTo('slow', 1);
+        sigilTully = true;
+        }
+        else if((sigilTully == false) && (tullyPoints == 1)){
+        $('#trophyCase4').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tully/tully_jack.png)").fadeTo('slow', 1);
+        sigilTully = true;
+        }
+        else if((sigilTully == false) && (tullyPoints == 0)){
+        $('#trophyCase4').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilTully = true;
+        }
+
+}
+ var sigilGreyjoy = false;
+    function trophyGreyjoy(){
+        if(sigilGreyjoy == true){
+        $('#trophyCase5').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/greyjoy/greyjoy_sigil.png)").fadeTo('slow', 1);
+        sigilGreyjoy = false;
+        }
+        else if((sigilGreyjoy == false) && (greyjoyPoints == 3)){
+        $('#trophyCase5').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/greyjoy/greyjoy_king.png)").fadeTo('slow', 1);
+        sigilGreyjoy = true;
+        }
+        else if((sigilGreyjoy == false) && (greyjoyPoints == 2)){
+        $('#trophyCase5').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/greyjoy/greyjoy_queen.png)").fadeTo('slow', 1);
+        sigilGreyjoy = true;
+        }
+        else if((sigilGreyjoy == false) && (greyjoyPoints == 1)){
+        $('#trophyCase5').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/greyjoy/greyjoy_jack.png)").fadeTo('slow', 1);
+        sigilGreyjoy = true;
+        }
+        else if((sigilGreyjoy == false) && (greyjoyPoints == 0)){
+        $('#trophyCase5').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilGreyjoy = true;
+        }
+
+}
+ var sigilLannister = false;
+    function trophyLannister(){
+        if(sigilLannister == true){
+        $('#trophyCase6').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/lannister/lannister_sigil.png)").fadeTo('slow', 1);
+        sigilLannister = false;
+        }
+        else if((sigilLannister == false) && (lannisterPoints == 3)){
+        $('#trophyCase6').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/lannister/lannister_king.png)").fadeTo('slow', 1);
+        sigilLannister = true;
+        }
+        else if((sigilLannister == false) && (lannisterPoints == 2)){
+        $('#trophyCase6').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/lannister/lannister_queen.png)").fadeTo('slow', 1);
+        sigilLannister = true;
+        }
+        else if((sigilLannister == false) && (lannisterPoints == 1)){
+        $('#trophyCase6').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/lannister/lannister_jack.png)").fadeTo('slow', 1);
+        sigilLannister = true;
+        }
+        else if((sigilLannister == false) && (lannisterPoints == 0)){
+        $('#trophyCase6').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilLannister = true;
+        }
+
+}
+ var sigilTyrell = false;
+    function trophyTyrell(){
+        if(sigilTyrell == true){
+        $('#trophyCase7').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tyrell/tyrell_sigil.png)").fadeTo('slow', 1);
+        sigilTyrell = false;
+        }
+        else if((sigilTyrell == false) && (tyrellPoints == 3)){
+        $('#trophyCase7').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tyrell/tyrell_king.png)").fadeTo('slow', 1);
+        sigilTyrell = true;
+        }
+        else if((sigilTyrell == false) && (tyrellPoints == 2)){
+        $('#trophyCase7').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tyrell/tyrell_queen.png)").fadeTo('slow', 1);
+        sigilTyrell = true;
+        }
+        else if((sigilTyrell == false) && (tyrellPoints == 1)){
+        $('#trophyCase7').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/tyrell/tyrell_jack.png)").fadeTo('slow', 1);
+        sigilTyrell = true;
+        }
+        else if((sigilTyrell == false) && (tyrellPoints == 0)){
+        $('#trophyCase7').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilTyrell = true;
+        }
+
+}
+ var sigilMartell = false;
+    function trophyMartell(){
+        if(sigilMartell == true){
+        $('#trophyCase8').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/martell/martell_sigil.png)").fadeTo('slow', 1);
+        sigilMartell = false;
+        }
+        else if((sigilMartell == false) && (martellPoints == 3)){
+        $('#trophyCase8').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/martell/martell_king.png)").fadeTo('slow', 1);
+        sigilMartell = true;
+        }
+        else if((sigilMartell == false) && (martellPoints == 2)){
+        $('#trophyCase8').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/martell/martell_queen.png)").fadeTo('slow', 1);
+        sigilMartell = true;
+        }
+        else if((sigilMartell == false) && (martellPoints == 1)){
+        $('#trophyCase8').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/martell/martell_jack.png)").fadeTo('slow', 1);
+        sigilMartell = true;
+        }
+        else if((sigilMartell == false) && (martellPoints == 0)){
+        $('#trophyCase8').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilMartell = true;
+        }
+
+}
+ var sigilBaratheon = false;
+    function trophyBaratheon(){
+        if(sigilBaratheon == true){
+        $('#trophyCase9').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/baratheon/baratheon_sigil.png)").fadeTo('slow', 1);
+        sigilBaratheon = false;
+        }
+        else if((sigilBaratheon == false) && (baratheonPoints == 3)){
+        $('#trophyCase9').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/baratheon/baratheon_king.png)").fadeTo('slow', 1);
+        sigilBaratheon = true;
+        }
+        else if((sigilBaratheon == false) && (baratheonPoints == 2)){
+        $('#trophyCase9').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/baratheon/baratheon_queen.png)").fadeTo('slow', 1);
+        sigilBaratheon = true;
+        }
+        else if((sigilBaratheon == false) && (baratheonPoints == 1)){
+        $('#trophyCase9').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/baratheon/baratheon_jack.png)").fadeTo('slow', 1);
+        sigilBaratheon = true;
+        }
+        else if((sigilBaratheon == false) && (baratheonPoints == 0)){
+        $('#trophyCase9').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilBaratheon = true;
+        }
+
+}
+ var sigilTargaryen = false;
+    function trophyTargaryen(){
+        if(sigilTargaryen == true){
+        $('#trophyCase10').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/targaryen/targ_sigil.png)").fadeTo('slow', 1);
+        sigilTargaryen = false;
+        }
+        else if((sigilTargaryen == false) && (targaryenPoints == 3)){
+        $('#trophyCase10').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/targaryen/targaryen_king.png)").fadeTo('slow', 1);
+        sigilTargaryen = true;
+        }
+        else if((sigilTargaryen == false) && (targaryenPoints == 2)){
+        $('#trophyCase10').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/targaryen/targaryen_queen.png)").fadeTo('slow', 1);
+        sigilTargaryen = true;
+        }
+        else if((sigilTargaryen == false) && (targaryenPoints == 1)){
+        $('#trophyCase10').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/targaryen/targaryen_jack.png)").fadeTo('slow', 1);
+        sigilTargaryen = true;
+        }
+        else if((sigilTargaryen == false) && (targaryenPoints == 0)){
+        $('#trophyCase10').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/crown.png)").fadeTo('slow', 1);
+        sigilTargaryen = true;
+        }
+
+}
+
+</script>
 
 
    <script>
+      
+  var arrynQuestionNumberOfAttempts = 0;
+    
+  function arrynQuestionAttempt() {
+    arrynQuestionNumberOfAttempts++;
+} 
+function getArrynQuestionPoints(){
+  if(arrynQuestionNumberOfAttempts == 0){
+    return 3;
+  }
+  else if(arrynQuestionNumberOfAttempts == 1){
+    return 2;
+  }
+  else if(arrynQuestionNumberOfAttempts >= 2){
+    return 1;
+  }
+}
+
+function arrynQuestionPageDisableButton(x){
+    document.getElementById('arrynIncorrectButton' + x).innerHTML = "";
+  $("#arrynIncorrectButton" + x).addClass('ui-disabled ui-btn-icon-left ui-icon-delete ui-shadow-icon ui-shadow');
+}
+
+function createArrynReward(){
+  if(arrynQuestionNumberOfAttempts == 0){
+    $('#arrynCompletionPageImage').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_king.png)").fadeTo('slow', 1);
+    document.getElementById('arrynCompletionPageText').innerHTML = "Petyr Baelish is the head of House Baelish, and the lord of an extremely minor holding, so small it has neither name nor maester, located in a small area within the Fingers, a coastal region in the northeastern shores of the Vale of Arryn. He is currently House Baelish's only living member. House Baelish had very meager origins and no distinguished lineage: Petyr's great-grandfather was a lowly sellsword from Braavos who came to the Vale at the invitation of House Corbray. Petyr's grandfather was a poor hedge knight, who managed to earn a minor lordship of a few stony acres in the smallest peninsula of the Fingers.<p><a href='#levelSelect' class='ui-btn ui-btn-inline'>Go to Map</a></p>";
+
+    document.getElementById('arrynCompletionPageTitle').innerHTML = "Petyr Baelish";
+
+  }
+  else if(arrynQuestionNumberOfAttempts == 1){
+    $('#arrynCompletionPageImage').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_queen.png)").fadeTo('slow', 1);
+    document.getElementById('arrynCompletionPageText').innerHTML = "Lysa was born into House Tully and was the second child of Lord Hoster Tully. She had an older sister, Catelyn and a younger brother, Edmure. Petyr Baelish was fostered with the Tullys and Lysa grew up with him. Lysa married Jon Arryn during Robert's Rebellion. Lord Jon was the head of House Arryn and a leader of the rebel faction fighting to overthrow the Mad King. The rebels forged an alliance with House Tully through marriage, with Lord Eddard Stark married to Catelyn and the then-elderly Jon to the still young Lysa.<p><a href='#levelSelect' class='ui-btn ui-btn-inline'>Go to Map</a></p>";
+
+    document.getElementById('arrynCompletionPageTitle').innerHTML = "Lysa Arryn";
+  }
+  else if(arrynQuestionNumberOfAttempts >= 2){
+    $('#arrynCompletionPageImage').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_jack.png)").fadeTo('slow', 1);
+    document.getElementById('arrynCompletionPageText').innerHTML = "Robin was born in King's Landing where his father was serving as the Hand of the King for Robert Baratheon. Jon begins an investigation into Robert's legitimate and bastard children and then takes a fever and dies suddenly. Robin inherits Jon's position. Lysa rushes Robin back to the Eyrie following Jon's death. She writes to her sister to accuse House Lannister of poisoning Jon. Lysa was fiercely protective of Robin and he leads an extremely sheltered life.<p><a href='#levelSelect' class='ui-btn ui-btn-inline'>Go to Map</a></p>";
+
+    document.getElementById('arrynCompletionPageTitle').innerHTML = "Robin Arryn";
+  }
+}   
+       
+       
+       
     var currentPoints = 0;
     var theWallCompleteLevel = true;
     var starksCompleteLevel = false;
@@ -902,16 +1384,16 @@ $('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargi
     var martellCompleteLevel = false;
     var baratheonCompleteLevel = false;
 
-    var theWallPoints = 0;
-    var starksPoints = 0;
-    var arrynPoints = 0;
-    var tullyPoints = 0;
-    var greyjoyPoints = 0;
-    var lannisterPoints = 0;
-    var tyrellPoints = 0;
-    var martellPoints = 0;
-    var baratheonPoints = 0;
-    var targaryenPoints = 0;
+    var theWallPoints = 2;
+    var starksPoints = 3;
+    var arrynPoints = 2;
+    var tullyPoints = 1;
+    var greyjoyPoints = 3;
+    var lannisterPoints = 2;
+    var tyrellPoints = 3;
+    var martellPoints = 2;
+    var baratheonPoints = 3;
+    var targaryenPoints = 1;
 
     // // var targaryenCompleteLevel = false;
 
