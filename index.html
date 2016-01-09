@@ -161,6 +161,75 @@
   margin-left: 25px;
  }
     }
+    
+    
+     #theWallCompletionPageImage{
+  width:295px;
+  height:470px;
+  float: left;
+ }
+ #theWallCompletionPageText{
+  width: 200px;
+  height: 470px;
+  float: left;
+  word-wrap: break-word; 
+  font-size: 12px;
+  padding-right: 5px;
+  margin-top: 20px;
+ }
+ #theWallCompletionPageTitle{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+ }
+ #theWallCompletionPageContainer{
+    background-color: #233439;
+    width: 500px;
+    height: 475px;
+ }
+#theWallPageImage {
+    height: 300px;
+    width: 100%;
+    background-image: url('http://highlighthollywood.com/wp-content/uploads/2014/11/eyrie-game-of-thrones-the-wolf-and-the-lion-011.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center; 
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
+}
+#theWallCluePageImage {
+    height: 300px;
+    width: 100%;
+    background-image: url('http://vignette2.wikia.nocookie.net/gotascent/images/6/6e/Vale-the_Eyrie.jpg/revision/latest?cb=20141009131344');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center; 
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
+}
+
+  @media all and (max-width: 45em) {
+       #theWallCompletionPageContainer{
+    width: 300px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+ #theWallCompletionPageText{
+  margin-left: 25px;
+ }
+    }
+
+    
 
       /*Swiper Trophy Case styles*/
     .swiper-container-trophy {
@@ -173,6 +242,7 @@
         background-size: cover;
         width: 295px;
         height: 470px;}   
+    
     
 </style>
 </head>
@@ -283,12 +353,12 @@
     
 <!--Rules of the Quiz page-->
 <div data-role="page" id="ruleOfQuiz" data-theme="b" >
-  <div data-role="header">
-  <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
-      <div class="header_image">
-    <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
-  </div>
-  <h1>Rules of the Quiz</h1>
+<div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
   <div data-role="content">
         <div class="ui-body ui-body-a ui-corner-all">
@@ -324,12 +394,14 @@
     
 <!--Trophy Case -->
 <div data-role="page" id="trophyCase" data-theme="a" >
-  <div data-role="header">
-  <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
-      <div style="margin-left:20%;" class="header_image">
-    <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"/>
+<div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
   </div>
-  </div>
+    
   <div data-role="content">
         <div class="ui-body ui-body-c ui-corner-all">
     <!-- Swiper Trophy Case -->
@@ -399,8 +471,9 @@ var myselect = $("#Children");
 myselect[0].selectedIndex = 0;
 myselect.selectmenu("refresh");
 var myselect = $("#Adults");
-myselect[1].selectedIndex = 1;
+myselect[0].selectedIndex = 0;
 myselect.selectmenu("refresh");
+myFunction();
                             }
           function EyrieV() {
          document.getElementById("Atract-Image").src="http://awoiaf.westeros.org/images/8/8f/The_Eyrie-TN.jpg";
@@ -525,10 +598,10 @@ myselect.selectmenu("refresh");
           document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
           document.getElementById("price").innerHTML = "<strong>Price £ " + rounded+"</strong>";
                   }if(y > 1){
-          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Tickets";
+          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
           document.getElementById("price").innerHTML =  "<strong>Price £ " + rounded+"</strong>";
                   }else
-          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Ticket and <strong>" + y + "</strong> Children Ticket";
+          document.getElementById("Tickets").innerHTML = "You have selected: <strong>" + x + "</strong> Adult Tickets and <strong>" + y + "</strong> Children Tickets";
           document.getElementById("price").innerHTML =  "<strong>Price £ " + rounded+"</strong>";
                                 }
           </script>
@@ -562,7 +635,7 @@ myselect.selectmenu("refresh");
      <div data-role="content" class="ui-content" style="text-align: center;">
   <form method="post" action="#purchase3">
       <div class="ui-field-contain">
-<label for="Title" class="select">Title</label>
+<label for="Title" class="select" style="color:white;">Title</label>
 <select name="Title" id="Title-select" data-mini="true" data-inline="true">
     <option value="Mr">Mr.</option>
     <option value="Ms">Ms.</option>
@@ -571,43 +644,43 @@ myselect.selectmenu("refresh");
 </div>
       
      <div class="ui-field-contain">  
-<label for="FirstName">First Name</label>
+<label for="FirstName" style="color:white;">First Name</label>
 <input  data-clear-btn="true" name="FirstName" data-mini="true" id="FirstName" value="" type="text">
       </div>
       
          
        <div class="ui-field-contain">
-      <label for="Surname">Surname</label>
+      <label for="Surname" style="color:white;">Surname</label>
 <input data-clear-btn="true" name="Surname" data-mini="true" id="Surname" value=""  type="text">
       </div>
       
        <div class="ui-field-contain">
-      <label for="Email">Email</label>
+      <label for="Email" style="color:white;">Email</label>
 <input data-clear-btn="true" name="Email" id="Email" data-mini="true" value="" placeholder="Placeholder@gmail.com" type="email">
       </div>
       
        <div class="ui-field-contain">
-      <label for="Telephone">Telephone</label>
+      <label for="Telephone" style="color:white;">Telephone</label>
 <input data-clear-btn="true" name="Telephone" data-mini="true" id="Telephone" value="" placeholder="079" type="tel">
       </div>
       
              <div class="ui-field-contain">
-      <label for="Adress1">Adress Line 1</label>
+      <label for="Adress1" style="color:white;">Adress Line 1</label>
 <input data-clear-btn="true" name="Adress1" data-mini="true" id="Adress1" value="" placeholder="Under St" type="text">
       </div>
       
              <div class="ui-field-contain">
-      <label for="Adress2">Adress Line 2</label>
+      <label for="Adress2" style="color:white;">Adress Line 2</label>
 <input data-clear-btn="true" name="Adress2" data-mini="true" id="Adress1" value="" placeholder="78" type="text">
       </div>
       
              <div class="ui-field-contain">
-      <label for="Postcode">Postcode</label>
+      <label for="Postcode" style="color:white;">Postcode</label>
 <input data-clear-btn="true" name="Postcode" data-mini="true" id="Postcode" value="" placeholder="n54 h6y" type="text">
       </div>
       
              <div class="ui-field-contain">
-      <label for="City">City</label>
+      <label for="City" style="color:white;">City</label>
 <input data-clear-btn="true" name="City" data-mini="true" id="City" value="" placeholder="London" type="text">
       </div>
       <hr>
@@ -619,7 +692,7 @@ myselect.selectmenu("refresh");
       
       <div class="ui-field-contain">
       <fieldset data-role="controlgroup">
-    <legend>Terms and Conditions</legend>
+    <legend style="color:white;">Terms and Conditions</legend>
     <input name="checkbox-1" id="checkbox-1" checked="" type="checkbox">
     <label for="checkbox-1">You're gonna have a bad time!</label>
     <input name="checkbox-2" id="checkbox-2" type="checkbox">
@@ -651,7 +724,7 @@ She must have something heavy inside</label>
     handler.open({
       name: 'Group 24.inc',
       description: 'Stripe Times',
-      amount: 2000
+      amount: document.getElementById("Adults").value * 299
     });
     e.preventDefault();
   });
@@ -689,10 +762,9 @@ She must have something heavy inside</label>
 <div data-role="page" id="levelSelect">
   <div data-role="header" data-position="fixed">
   <div class="header_image">
-  <img  src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png" alt="Logo"/>
+<a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" >Back</a>  
+   <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
   </div>
-  <h1>Level Select</h1>
-
         <a href="#right-panel" data-icon="carat-l" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-right ui-icon-navigation">
           Houses
         </a>
@@ -732,6 +804,46 @@ She must have something heavy inside</label>
 
 
 <!-- HOUSE PLACEHOLDER PAGES -->
+<div data-role="page" id="theWallCluePage" data-theme="b" >
+  <div data-role="header" data-position="fixed" >
+    <div class="header_image">
+    <a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" style="margin-top: 5px;">Back</a>
+    <a href="#home"  style="margin-left:20%;"><img src="https://raw.githubusercontent.com/Group24/GOT-iPad/gh-pages/Image/logo.png"></img></a>
+    </div>  
+    <div style="background: margin-top: 0px; margin-bottom: -10px; padding: -10px;"></div>
+  </div>
+
+<div data-role="content" data-theme="b" style="text-align: center;"> 
+
+
+<h3>The Great Houses of Westeros</h3>
+<div class="ui-grid-a ui-responsive">
+    <div class="ui-block-a">
+      <div class="ui-body" style="text-align: left;">
+
+          <span style="color:red">T</span>hese are the eight greatest houses of westeros,<br>
+          <span style="color:red">A</span>t the north cold and proud lies the Starks their sigil a howling Wolf,<br>
+          <span style="color:red">R</span>owing south are the Tullys thier banners flying a proud Trout,<br>
+          <span style="color:red">G</span>oing east the vale ruled over by the Arryns their Falcon crest flying,<br>
+          <span style="color:red">A</span>dvancing west lie the wealthy house Lanister, Lions in their den,<br>
+          <span style="color:red">R</span>ooted south are the Tyrells symbol of a golden Rose,<br>
+          <span style="color:red">Y</span>ellow Sun sears the land of Martel a Spear strikes the skies,<br>
+          <span style="color:red">E</span>choing thunder seat of house Baratheon and their emblem of the Stag,<br>
+          <span style="color:red">N</span> umbering eight is the rulling house of <span style="color:red">Dragons</span>.
+          
+
+      </div>
+    </div>
+    <div class="ui-block-b">
+      <div class="ui-body"><div id="arrynCluePageImage"></div></div>
+    </div>
+</div>
+</div>
+<div data-role="footer" data-position="fixed">
+</div>
+</div>
+
+
 
 <div data-role="page" id="theWall" data-theme="b" >
   <div data-role="header" data-position="fixed" >
@@ -747,81 +859,132 @@ She must have something heavy inside</label>
 <script src="quizy/js/jquery.flip.min.js" /></script>
 <script src="quizy/js/jquery.quizymemorygame.js" /></script>
 
-<div id="my-memorygame" class="quizy-memorygame" style="margin-left:15%;" >
+<div id="my-memorygame" class="quizy-memorygame" style="margin-left:15%;" onclick=CountFun();>
 <ul>
-  <li class="Stark">
+  <li class="Stark" >
     Stark
   </li>
   <li class="Stark">
-    Wolf
+    <img src="Image/Sigil/Stark.png"></img>
   </li>
   <li class="Lannister">
     Lannister
   </li>
   <li class="Lannister">
-    Lion
+    <img src="Image/Sigil/Lannister.png"></img>
   </li>
   <li class="Arryn">
     Arryn
   </li>
   <li class="Arryn">
-    falcon 
+    <img src="Image/Sigil/Arryn.png"></img>
   </li>
   <li class="Tully">
     Tully 
   </li>
   <li class="Tully">
-    Trout 
+    <img src="Image/Sigil/Tully.png"></img>
   </li>
    <li class="Baratheon">
     Baratheon 
   </li>
   <li class="Baratheon">
-    Stag 
+    <img src="Image/Sigil/Baratheon.png"></img>
   </li>
   <li class="Tyrell">
     Tyrell
   </li>
   <li class="Tyrell">
-    Rose 
+    <img src="Image/Sigil/Tyrell.png"></img>
   </li>
   <li class="Martell">
     Martell
   </li>
   <li class="Martell">
-    Red sun
+    <img src="Image/Sigil/Martell.png"></img>
   </li>
   <li class="Targaryen">
     Targaryen
   </li>
   <li class="Targaryen">
-    Dragon
+   <img src="Image/Sigil/Targaryen.png"></img>
   </li>
 </ul>
 </div>
 
 <script>
-$('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, textSummaryTitle:'ForstFang' });
+$('#my-memorygame').quizyMemoryGame({itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, textSummaryTitle:'Password is ForstFang',});
 </script>
 
 </div>
 
 
-
   <div class="ui-btn ui-input-btn ui-shadow">
-  Complete question
-  <input type="button" data-corners="false" data-enhanced="true" value="Complete Question" onclick="selectMap(3); setTheWallPoints(3)"></input>
+    <a href="#theWallCompletionPage" class="ui-btn ui-btn-inline levelSelectPage" onclick="selectMap(3); setTheWallPoints(getTheWallQuestionPoints()); createTheWallReward();">Complete question</a>
 </div>
-  <div class="ui-btn ui-input-btn ui-shadow">
-  reveal number
-  <input type="button" data-corners="false" data-enhanced="true" value="The Button" onclick="showNum();"></input>
-</div>
-
-              <a href="#levelSelect" class="levelSelectPage" class="ui-btn rulesPageSkipButton">Go to map</a>
 
 <div data-role="footer" data-position="fixed" >
+      <a href="#theWallCluePage" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-info">Clue</a>
 </div>
 </div>
+
+<div data-role="page" id="theWallCompletionPage" data-dialog="true">
+  <div data-role="header" >
+  <h4>You have unlocked</h4>
+  <h4 id="theWallCompletionPageTitle"></h4>
+  </div>
+  <div id="theWallCompletionPageContainer">
+    <div id="theWallCompletionPageImage"></div>
+    <div id="theWallCompletionPageText"></div>
+  </div>
+
+<div data-role="footer">
+</div>
+</div>
+
+<script>
+    var cnt=0;
+    
+    function CountFun(){
+     cnt=parseInt(cnt)+parseInt(1);
+    }
+    
+    function getTheWallQuestionPoints(){
+  if(cnt < 55){
+    return 3;
+  }
+  else if(cnt >60){
+    return 2;
+  }
+  else if(cnt > 70){
+    return 3;
+  }
+}  
+    
+    
+function createTheWallReward(){
+  if(cnt < 55){
+    $('#theWallCompletionPageImage').animate({'opacity': 0}, 000).css("background-image", "url(Image/cards/thewall/thewall_king.png)").fadeTo('slow', 1);
+    document.getElementById('theWallCompletionPageText').innerHTML = "Petyr Baelish is the head of House Baelish, and the lord of an extremely minor holding, so small it has neither name nor maester, located in a small area within the Fingers, a coastal region in the northeastern shores of the Vale of Arryn. He is currently House Baelish's only living member. House Baelish had very meager origins and no distinguished lineage: Petyr's great-grandfather was a lowly sellsword from Braavos who came to the Vale at the invitation of House Corbray. Petyr's grandfather was a poor hedge knight, who managed to earn a minor lordship of a few stony acres in the smallest peninsula of the Fingers.<p><a href='#levelSelect' class='ui-btn ui-btn-inline'>Go to Map</a></p>";
+
+    document.getElementById('theWallCompletionPageTitle').innerHTML = "Petyr Baelish";
+
+  }
+  else if(cnt >60){
+    $('#theWallCompletionPageImage').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_queen.png)").fadeTo('slow', 1);
+    document.getElementById('theWallCompletionPageText').innerHTML = "Lysa was born into House Tully and was the second child of Lord Hoster Tully. She had an older sister, Catelyn and a younger brother, Edmure. Petyr Baelish was fostered with the Tullys and Lysa grew up with him. Lysa married Jon Arryn during Robert's Rebellion. Lord Jon was the head of House Arryn and a leader of the rebel faction fighting to overthrow the Mad King. The rebels forged an alliance with House Tully through marriage, with Lord Eddard Stark married to Catelyn and the then-elderly Jon to the still young Lysa.<p><a href='#levelSelect' class='ui-btn ui-btn-inline'>Go to Map</a></p>";
+
+    document.getElementById('theWallCompletionPageTitle').innerHTML = "Lysa Arryn";
+  }
+  else if(cnt > 70){
+    $('#theWallCompletionPageImage').animate({'opacity': 0}, 000).css("background-image", "url(image/cards/arryn/arryn_jack.png)").fadeTo('slow', 1);
+    document.getElementById('theWallCompletionPageText').innerHTML = "Robin was born in King's Landing where his father was serving as the Hand of the King for Robert Baratheon. Jon begins an investigation into Robert's legitimate and bastard children and then takes a fever and dies suddenly. Robin inherits Jon's position. Lysa rushes Robin back to the Eyrie following Jon's death. She writes to her sister to accuse House Lannister of poisoning Jon. Lysa was fiercely protective of Robin and he leads an extremely sheltered life.<p><a href='#levelSelect' class='ui-btn ui-btn-inline'>Go to Map</a></p>";
+
+    document.getElementById('theWallCompletionPageTitle').innerHTML = "Robin Arryn";
+  }
+}
+</script>
+
 
 <div data-role="page" id="stark" data-dialog="true">
   <div data-role="header" >
@@ -1384,28 +1547,17 @@ function createArrynReward(){
     var martellCompleteLevel = false;
     var baratheonCompleteLevel = false;
 
-    var theWallPoints = 2;
-    var starksPoints = 3;
-    var arrynPoints = 2;
-    var tullyPoints = 1;
-    var greyjoyPoints = 3;
-    var lannisterPoints = 2;
-    var tyrellPoints = 3;
-    var martellPoints = 2;
-    var baratheonPoints = 3;
-    var targaryenPoints = 1;
+    var theWallPoints = 0;
+    var starksPoints = 0;
+    var arrynPoints = 0;
+    var tullyPoints = 0;
+    var greyjoyPoints = 0;
+    var lannisterPoints = 0;
+    var tyrellPoints = 0;
+    var martellPoints = 0;
+    var baratheonPoints = 0;
+    var targaryenPoints = 0;
 
-    // // var targaryenCompleteLevel = false;
-
-    // var swiper = new Swiper('.swiper-container', {
-    //     pagination: '.swiper-pagination',
-    //     nextButton: '.swiper-button-next',
-    //     prevButton: '.swiper-button-prev',
-    //     slidesPerView: 1,
-    //     paginationClickable: true,
-    //     spaceBetween: 30,
-    //     loop: true
-    // });
 
 
     // Javascript for panel swipe on map level select page
